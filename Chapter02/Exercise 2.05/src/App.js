@@ -83,7 +83,7 @@ class App extends Component {
   validatePasswordConfirmationOnBlur(event) {
     const passwordConfirmation = event.target.value;
     const errors = this.state.errors;
-    if (passwordConfirmation != this.state.password) {
+    if (passwordConfirmation !== this.state.password) {
       errors.push("Password must match password confirmation!");
     }
     this.setState({ passwordConfirmation, errors });
