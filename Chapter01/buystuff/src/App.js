@@ -1,25 +1,34 @@
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const Header = props => <h2>{props.title}</h2>;
+const InventoryItem = props => <div>{props.itemName}<hr/>{props.itemPrice}</div>;
+class App extends Component{
+
+  constructor(props) {
+    super(props);
+    this.title = "BuyStuff";
+    this.state = {
+      items:[ {
+        itemName: "Shoe",
+        itemPrice: 5
+      }, {
+        itemName: "Sock",
+        itemPrice: 3
+      }]
+    }
+  }
+
+
+
+  render() {
+    return (
+      <div className="app">
+      <Header title={this.title}/>
+      <InventoryItem itemName={this.state.items[0].itemName} itemPrice={this.state.items[0].itemPrice}/>
+      <InventoryItem itemName={this.state.items[1].itemName} itemPrice={this.state.items[1].itemPrice}/>
+    </div>);
+  }
 }
 
 export default App;
