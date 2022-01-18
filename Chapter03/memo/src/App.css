@@ -1,0 +1,47 @@
+.tile {
+  width: 100px;
+  height: 100px;
+  font-size: 64pt;
+  border: 2px solid #aaa;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  float: left;
+  cursor: pointer;
+  box-shadow: 2px 2px 1px 1px #00000038;
+}
+
+.tile.flipped {
+  background: repeating-linear-gradient(45deg, #2ce2e27a 40%, #ffffff7d 50%),
+    repeating-linear-gradient(135deg, #2ce2e2 40%, #ffffff 50%);
+}
+
+.tile.matched {
+  background: #97e296;
+}
+
+.tile:not(.flipped) {
+  animation: flip-tile-front 1s ease-in-out;
+}
+
+@keyframes flip-tile-front {
+  0% {
+    transform: rotate3d(0, 0, 0, 90deg);
+    background: repeating-linear-gradient(45deg, #2ce2e27a 40%, #ffffff7d 50%),
+    repeating-linear-gradient(135deg, #2ce2e2 40%, #ffffff 50%);
+    color: transparent;
+  }
+
+  40% {
+    transform: rotate3d(0, 1, 0, 90deg);
+    color: transparent;
+  }
+
+  60% {
+    transform: rotate3d(0, 1, 0, 90deg);
+  }
+
+  100% {
+    transform: rotate3d(0, 0, 0, 90deg);
+  }
+}
