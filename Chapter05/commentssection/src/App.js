@@ -1,10 +1,12 @@
 import React from 'react';
 import './App.css';
+import CommentsSection from './components/CommentsSection';
+import json from './comments.json';
 
 function App() {
   return (
     <div className="App">
-      <h2>Comments</h2>
+      <CommentsSection comments={json.comments} />
     </div>
   );
 }

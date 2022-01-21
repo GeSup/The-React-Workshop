@@ -1,0 +1,28 @@
+.comment-container {
+    border: 1px solid lightgray;
+    margin: 10px 50px;
+    display: flex;
+    padding: 10px;
+}
+
+.comment-img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    align-self: center;
+    margin-right: 10px;
+}
+
+.comment-content h2 {
+    margin: 5px 0;
+}
+
+.comment .comment {
+    margin-left: 40px;
+}
+
+.comment-reply {
+    background-color: white;
+    border: 1px solid grey;
+    padding: 8px 10px;
+}
