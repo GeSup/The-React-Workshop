@@ -1,0 +1,16 @@
+.product {
+    border: 1px solid lightgray;
+    margin: 5px 0;
+    padding: 10px;
+}
+
+.product h3 {
+    margin: 5px 0;
+}       
+
+.product button {
+    position: absolute;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+}

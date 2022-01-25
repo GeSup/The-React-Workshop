@@ -1,0 +1,15 @@
+button.filter-btn {
+    margin: 0 10px;
+    padding: 8px 14px;
+    border-radius: 8px;
+}
+
+.filter-btn.pushed {
+    background-color: black;
+    color: white;
+}
+
+.products {
+    display: flex;
+    flex-direction: column;
+}
